@@ -1,0 +1,120 @@
+<html>
+<head>
+<script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+*,*:before,*:after{margin:0;padding:0;box-sizing: border-box;}
+body{font-family: Arial;}
+header{color: #888;background-color: lightgrey;min-height: 52px;}
+header h1{font-size: 30px;}
+.container{max-width: 1100px;margin: 0 auto;}
+#content{border: 2px dotted green;padding: 18px;margin-right: 300px;min-height: 2600px;color: darkgrey;}
+#sidebar{float: right;color: #ffbdbd;}
+#sidebar .sidebar__inner{position:relative; border: 2px dotted red;min-height: 300px;min-width: 300px;margin-bottom: 10px}
+footer{height: 800px;border: 2px dotted black;margin-top: 20px;text-align: center;color: #8e8d8d;background: rgba(0,0,0,0.02);}
+footer p{margin: 0;}
+.clearfix:after{display: block;content: "";clear: both;}
+.stickyAd{position: fixed !important;z-index: 98;background-color:red;}
+.sticky {position: fixed;  z-index: 99;  top: 0;  width: 100%;}
+.logos {min-height: 133px;width: 100%;background-color: darkgrey;}
+</style>
+
+<script>
+	$(function () {
+		'use strict';
+		if ($("ul.nouser")[0]){
+			$("li#menu-item-26109").show();
+		} else {
+		}
+		$(window).resize(function(){
+		var windowHeight = $(window).height();
+		var windowWidth = $(window).width();
+		if (windowWidth <= 991){
+			var headerHeight = 233;
+		} else {
+			var headerHeight = 130;
+		}
+		$(document).scroll(function(){
+		  var y = $(this).scrollTop();
+		  if( y > headerHeight) {			
+			$('header').addClass('sticky');
+		  } else {
+			$('header').removeClass('sticky');
+		  }
+		});
+		}).resize();
+	});
+</script>
+
+
+
+<script>
+$(function () {
+	var windowHeight = $(window).height();
+	var adHeight = $('.widget-5').outerHeight(true) - $('.div-gpt-ad-half-page').outerHeight(true) + 70;
+	var capHeight = windowHeight - $('footer').outerHeight(true) - $('.div-gpt-ad-half-page').outerHeight(true) - 170;
+	console.log("total height = " + windowHeight);
+    console.log("capheight = " + capHeight);
+	if ($('#content').outerHeight(true) > $('.widget-5').outerHeight(true) + 300 && windowHeight > 738 ) {
+	$(document).scroll(function(){
+	    var stickyHeight = $(this).scrollTop();
+		if(stickyHeight > adHeight && stickyHeight < capHeight) {
+    		$('.div-gpt-ad-half-page').css("top", "60");
+      		$('.div-gpt-ad-half-page').addClass('stickyAd');
+		} else if (stickyHeight > adHeight && stickyHeight >= capHeight) {
+			$('.div-gpt-ad-half-page').css("top", capHeight - stickyHeight);
+      		$('.div-gpt-ad-half-page').addClass('stickyAd');
+		} else {
+			$('.div-gpt-ad-half-page').css("top", "0");
+      		$('.div-gpt-ad-half-page').removeClass('stickyAd');
+    	}
+    	console.log(stickyHeight + "  :  " + adHeight + "   :   " + capHeight + "   :   " + windowHeight)
+	}).scroll();
+	}
+});
+</script>
+
+
+</head>
+<body>
+	<div class="logos">
+	</div>
+	<header>
+		<div class="container">
+			<h1>Nav Bar</h1>
+		</div>
+	</header>
+	<div class="container clearfix">
+		<div id="sidebar" class="widget-5">
+			<div class="sidebar__inner">
+				<p>This is cube</p>
+			</div>
+			<div class="sidebar__inner">
+				<p>This is cube</p>
+			</div>
+			<div class="sidebar__inner div-gpt-ad-half-page">
+				<p>This is sticky cube</p>
+			</div>
+		</div>
+		<div id="content">
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at bibendum sapien. Vivamus iaculis purus non dapibus convallis. Suspendisse non felis vel quam convallis vehicula sed nec nulla. In egestas at nulla ac malesuada. Pellentesque sagittis condimentum vestibulum. Duis ut iaculis risus, quis auctor nisi. Sed nec aliquam tellus. Integer tincidunt suscipit turpis, in imperdiet arcu egestas non. Ut a aliquet ipsum. Praesent ullamcorper nunc quam, nec pellentesque erat facilisis vitae. Donec et viverra est, ac dictum leo. Suspendisse pulvinar vestibulum tellus, eu euismod purus lacinia ac. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
+<p>
+Sed leo est, aliquam at arcu quis, lacinia volutpat felis. Nam dictum, sapien eu venenatis imperdiet, lectus nisi maximus nisi, ac vehicula urna sem nec nisl. Nullam placerat congue enim, a pellentesque neque aliquam ut. Suspendisse porttitor, sem at facilisis tincidunt, ligula risus commodo augue, ut dictum ligula arcu vel velit. Cras eget feugiat leo. Fusce finibus ipsum vel laoreet laoreet. Nullam sed magna molestie, tempus turpis eu, scelerisque orci. Mauris eu dignissim nunc. Etiam porta ullamcorper velit, sed luctus nibh aliquam eu. Fusce id semper erat. In vel nunc ac mi placerat euismod vitae non ipsum. Nunc ac mi et nulla aliquam rutrum sed in arcu. Aliquam sagittis elit nunc, finibus aliquam purus malesuada pellentesque.
+</p>
+<p>
+Nulla blandit magna in libero feugiat, quis porttitor magna fringilla. Curabitur sagittis libero et libero varius porta. Ut nec eleifend nunc. Curabitur nisi lorem, sodales posuere iaculis a, sollicitudin nec lorem. Ut sed urna consequat enim iaculis lacinia. Nullam semper lorem vitae lectus tincidunt efficitur. Maecenas placerat, metus ullamcorper bibendum efficitur, diam ex hendrerit odio, a aliquet sem leo id magna. Donec iaculis libero dui, eget volutpat quam faucibus eget. Donec justo est, finibus eget sagittis cursus, pellentesque at ligula. Maecenas pulvinar, libero ut consequat eleifend, nisl massa pellentesque metus, vitae lobortis dolor sapien ac enim. Vestibulum a aliquam sapien, nec maximus dui. Integer tempus sollicitudin venenatis. Nunc gravida, lorem id rhoncus gravida, enim urna placerat turpis, at tempor purus velit nec eros. Morbi enim eros, bibendum nec enim eget, tincidunt tempor diam. Vestibulum ut metus ac nunc ultricies suscipit.
+</p>
+<p>
+Duis id leo nisi. Praesent gravida dolor ut lobortis scelerisque. Vivamus finibus nunc a tempus commodo. Vestibulum aliquet mi et nibh aliquet gravida. Praesent diam nibh, condimentum eu faucibus convallis, malesuada at lectus. Cras a mi erat. Duis nisl enim, sollicitudin nec aliquam ac, sodales in purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In bibendum tristique enim, sit amet sagittis dui semper at.
+</p>
+<p>
+Suspendisse sit amet massa ligula. Nam eget est vitae turpis aliquet elementum. Integer ac aliquet erat. Mauris placerat metus mauris, vitae hendrerit ligula malesuada molestie. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras auctor, urna non dictum tempus, odio justo sollicitudin orci, sit amet iaculis velit risus et ante. Integer vulputate maximus consequat. Donec luctus ligula ipsum, eget euismod mi posuere non. Proin malesuada nisi ac justo aliquet varius. In enim augue, aliquet ac iaculis at, tincidunt sed augue. Cras posuere aliquam mollis. Etiam accumsan ante a orci pulvinar aliquet. Vivamus id sapien in odio ultricies pulvinar. Fusce et ullamcorper lorem, vel pharetra mi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc sed ipsum accumsan, placerat tellus sed, cursus lorem.
+</p>
+		</div>		
+	</div>
+	<footer>
+		<p>Very Tall Footer</p>
+	</footer>
+</body>
+</html>
