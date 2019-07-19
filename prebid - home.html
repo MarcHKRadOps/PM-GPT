@@ -3,7 +3,7 @@
         <script async src="https://www.googletagservices.com/tag/js/gpt.js"></script>
         <script async src="<<link to uploaded prebid.js file here>>"></script>
         <script type='text/javascript' src='https://www.practicalmachinist.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
-        <!-- //Connect Container: practicalmachinist.com --> <script src=“//get.s-onetag.com/b12d81fb-9947-42c0-b3ac-15d295af4c29/tag.min.js” async defer></script>
+        <!-- //Connect Container: practicalmachinist.com --> <script src="//get.s-onetag.com/b12d81fb-9947-42c0-b3ac-15d295af4c29/tag.min.js" async defer></script>
         <script>
             var desktopSizes = [[970, 250],[970,90],[728,90],[300, 600],[300,250],[160,600],[120, 600]];
             var phoneSizes = [[320, 100],[320, 50],[300, 250]];
@@ -30,7 +30,8 @@
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
                         {bidder: 'emx_digital',params: {tagid: '71903'}},
                         {bidder: 'bidfluence',labelAny: ['desktop'],params:{placementId:'ad34c2ea-2941-49fb-b093-6dd687bf3943',publisherId:'cd78fa57-3e97-445a-83eb-1548fd51f79f'}},
-                        {bidder:'bidfluence',labelAny: ['mobile'],params:{placementId:'bf6b56b6-de57-4b69-bf6a-40385519d6f9',publisherId:'cd78fa57-3e97-445a-83eb-1548fd51f79f'}}
+                        {bidder:'bidfluence',labelAny: ['mobile'],params:{placementId:'bf6b56b6-de57-4b69-bf6a-40385519d6f9',publisherId:'cd78fa57-3e97-445a-83eb-1548fd51f79f'}},
+                        {bidder: 'conversant',params: {site_id: '125324'}}
                     ]
                 },
                 {
@@ -49,7 +50,8 @@
                         {bidder: 'sovrn',labelAny: ['mobile'],params: {tagid: '616027'}},
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
                         {bidder: 'emx_digital',params: {tagid: '71904'}},
-                        {bidder: 'bidfluence',params:{placementId:'58133d8f-5ddd-41d6-b57b-35a477c6a755',publisherId:'cd78fa57-3e97-445a-83eb-1548fd51f79f'}}
+                        {bidder: 'bidfluence',params:{placementId:'58133d8f-5ddd-41d6-b57b-35a477c6a755',publisherId:'cd78fa57-3e97-445a-83eb-1548fd51f79f'}},
+                        {bidder: 'conversant',params: {site_id: '125324'}}
                     ]
                 },
                 {
@@ -68,7 +70,8 @@
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
                         {bidder: 'emx_digital',params: {tagid: '71905'}},
 						{bidder: 'bidfluence',labelAny: ['desktop'],params:{placementId:'1558b6bd-fad2-4338-90bb-f80acfc43fdb',publisherId:'cd78fa57-3e97-445a-83eb-1548fd51f79f'}},
-						{bidder:'bidfluence',labelAny: ['mobile'],params:{placementId:'a996660c-5e6e-4e22-ba7f-4596a0b8101c',publisherId:'cd78fa57-3e97-445a-83eb-1548fd51f79f'}}
+						{bidder:'bidfluence',labelAny: ['mobile'],params:{placementId:'a996660c-5e6e-4e22-ba7f-4596a0b8101c',publisherId:'cd78fa57-3e97-445a-83eb-1548fd51f79f'}},
+                        {bidder: 'conversant',params: {site_id: '125324'}}
                     ]
                 }
             ];
@@ -99,7 +102,12 @@
                     sizeConfig: [
                     	{mediaQuery: '(min-width: 768px)', sizesSupported: [[970, 250],[970,90],[728,90],[300, 600],[300,250],[160,600],[120, 600]], labels: ['desktop']},
                     	{mediaQuery: '(min-width: 0px) and (max-width: 767px)',sizesSupported: [[320, 100],[320, 50],[300, 250]],labels: ['mobile']}
-                    ]
+                    ],
+                    usersync:{
+                        userIds:[{
+                            name:'pubCommonId',storage:{type:'cookie',name:'_pubCommonId'}
+                        }]
+                    }
                 });
                 pbjs.enableAnalytics({provider: 'roxot',options: {publisherId: '492e72c0-440b-4801-87ed-0a77bdd5ab09'}});
                 pbjs.requestBids({
