@@ -1,14 +1,10 @@
 <html>
     <head>
-        <script async src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+        <script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
         <script async src="<<link to uploaded prebid.js file here>>"></script>
         <script type='text/javascript' src='https://www.practicalmachinist.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
         <!-- //Connect Container: practicalmachinist.com --> <script src="//get.s-onetag.com/b12d81fb-9947-42c0-b3ac-15d295af4c29/tag.min.js" async defer></script>
         <script>
-            var desktopSizes = [[970, 250],[970,90],[728,90],[300, 600],[300,250],[160,600],[120, 600]];
-            var phoneSizes = [[320, 100],[320, 50],[300, 250]];
-            var allSizes = [[970, 250],[970,90],[728,90],[320, 100],[320, 50],[300, 600],[300, 250],[160,600],[120,600]];
-
             var PREBID_TIMEOUT = 1000;
             var FAILSAFE_TIMEOUT = 3000;
 
@@ -17,15 +13,12 @@
                     code: 'div-gpt-ad-Header',
                     mediaTypes: {
                         banner: {
-                            sizes: allSizes
+                            sizes: [[970, 250],[728,90],[300,250]]
                         }
                     },
                     bids: [
-                        {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616016'}},
-                        {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616017'}},
+                        {bidder: 'sovrn',labelAny: ["desktopLarge"],params: {tagid: '616016'}},
                         {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616018'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616019'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616020'}},
                         {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616021'}},
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
                         {bidder: 'emx_digital',params: {tagid: '71903'}},
@@ -38,14 +31,11 @@
                     code: 'div-gpt-ad-Footer',
                     mediaTypes: {
                         banner: {
-                            sizes: [[970,90],[728,90],[320, 100],[320, 50]]
+                            sizes: [[970, 250],[728,90],[300,250]]
                         }
                     },
                     bids: [
-                        {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616028'}},
                         {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616029'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616031'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616030'}},
                         {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616032'}},
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
                         {bidder: 'emx_digital',params: {tagid: '71905'}},
@@ -80,8 +70,9 @@
                 pbjs.setConfig({
                     priceGranularity: customPriceMap,
                     sizeConfig: [
-                        {mediaQuery: '(min-width: 768px)', sizesSupported: [[970, 250],[970,90],[728,90],[300, 600],[300,250],[160,600],[120, 600]], labels: ['desktop']},
-                        {mediaQuery: '(min-width: 0px) and (max-width: 767px)',sizesSupported: [[320, 100],[320, 50],[300, 250]],labels: ['mobile']}
+                        {mediaQuery: '(min-width: 1320px)', sizesSupported: [[970, 250]], labels: ['desktopLarge']},
+                        {mediaQuery: '(min-width: 768px) and (max-width: 1319px)', sizesSupported: [[728,90],[300, 600],[300,250]], labels: ['desktop']},
+                        {mediaQuery: '(min-width: 0px) and (max-width: 767px)',sizesSupported: [[300, 250]],labels: ['mobile']}
                     ],
                     usersync:{
                         userIds:[{
@@ -111,20 +102,21 @@
 
             googletag.cmd.push(function() {
                 var mapLeaTop = googletag.sizeMapping().
-                    addSize([0, 0], [[320, 50],[320,100],[300,250]]).
-                    addSize([768, 0], [[970, 250],[970,90],[728,90]]).
+                    addSize([0, 0], [300,250]).
+                    addSize([768, 0], [728,90]).
+                    addSize([1320, 0], [970,250]).
                     build();
-                var mapLeaBot = googletag.sizeMapping().
-                    addSize([0, 0], [[320, 50],[320,100],[300,250]]).
-                    addSize([768, 0], [[970,90],[728,90]]).
+                var mapLeaFoot = googletag.sizeMapping().
+                    addSize([0, 0], [300,250]).
+                    addSize([768, 0], [728,90]).
+                    addSize([1320, 0], [970,250]).
                     build();
-                googletag.defineSlot('/1055375/Header', [[970,250],[970,90],[728,90],[320, 50]], 'div-gpt-ad-Header').defineSizeMapping(mapLeaTop).addService(googletag.pubads());
-                googletag.defineSlot('/1055375/Footer', [[970,90],[728,90],[320, 50]], 'div-gpt-ad-Footer').defineSizeMapping(mapLeaBot).addService(googletag.pubads());
+                googletag.defineSlot('/1055375/Header', [728,90], 'div-gpt-ad-Header').defineSizeMapping(mapLeaTop).addService(googletag.pubads());
+                googletag.defineSlot('/1055375/Footer', [728,90], 'div-gpt-ad-Footer').defineSizeMapping(mapLeaFoot).addService(googletag.pubads());
                 googletag.pubads().enableSingleRequest();
-                googletag.pubads().collapseEmptyDivs(true);
-                googletag.pubads().setTargeting('category', '');
-                googletag.pubads().setTargeting('keywords', ['']);
-                googletag.pubads().setTargeting('script', '');
+                googletag.pubads().setTargeting('category', 'ezine');
+                var articleSection = document.querySelector("meta[property='article:section']").getAttribute("content");
+                googletag.pubads().setTargeting('section', articleSection);
                 googletag.enableServices();
             });
 
@@ -133,8 +125,7 @@
     </head>
 
     <body>
-        <h2>ezine test</h2>
-        <h5>advert</h5>
+
         <div id='div-gpt-ad-Header'>
             <script type='text/javascript'>
                 googletag.cmd.push(function() {
@@ -143,7 +134,6 @@
             </script>
         </div>        
 
-        <h5>Advert</h5>
         <div id='div-gpt-ad-Footer'>
             <script type='text/javascript'>
                 googletag.cmd.push(function() {

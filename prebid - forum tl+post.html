@@ -4,11 +4,7 @@
         <script async src="<<link to uploaded prebid.js file here>>"></script>
         <script type='text/javascript' src='https://www.practicalmachinist.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
         <!-- //Connect Container: practicalmachinist.com --> <script src="//get.s-onetag.com/b12d81fb-9947-42c0-b3ac-15d295af4c29/tag.min.js" async defer></script>
-        <script>
-            var desktopSizes = [[970, 250],[970,90],[728,90],[300, 600],[300,250],[160,600],[120, 600]];
-            var phoneSizes = [[320, 100],[320, 50],[300, 250]];
-            var allSizes = [[970, 250],[970,90],[728,90],[320, 100],[320, 50],[300, 600],[300, 250],[160,600],[120,600]];
-            
+        <script>         
             var PREBID_TIMEOUT = 1000;
             var FAILSAFE_TIMEOUT = 3000;
 
@@ -17,15 +13,12 @@
                     code: 'div-gpt-ad-Header',
                     mediaTypes: {
                         banner: {
-                            sizes: [[970, 250],[970,90],[728,90],[320, 100],[320, 50]]
+                            sizes: [[970, 250],[728,90],[300,250]]
                         }
                     },
                     bids: [
-                        {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616033'}},
-                        {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616034'}},
+                        {bidder: 'sovrn',labelAny: ["desktopLarge"],params: {tagid: '616035'}},
                         {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616035'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616036'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616037'}},
                         {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616038'}},
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
                         {bidder: 'emx_digital',params: {tagid: '71903'}},
@@ -38,16 +31,12 @@
                     code: 'div-gpt-ad-Rightrail_1',
                     mediaTypes: {
                         banner: {
-                            sizes: [[300, 600],[300, 250],[160,600],[120,600],[320, 100],[320, 50]]
+                            sizes: [[300, 600],[300, 250]]
                         }
                     },
                     bids: [
                         {bidder: 'sovrn',labelAny: ["desktop","mobile"],params: {tagid: '616061'}},
                         {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616062'}},
-                        {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616063'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616064'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616065'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616066'}},
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
                         {bidder: 'emx_digital',params: {tagid: '71904'}},
                         {bidder:'bidfluence',params:{placementId:'58133d8f-5ddd-41d6-b57b-35a477c6a755',publisherId:'cd78fa57-3e97-445a-83eb-1548fd51f79f'}},
@@ -58,16 +47,12 @@
                     code: 'div-gpt-ad-Rightrail_2',
                     mediaTypes: {
                         banner: {
-                            sizes: [[300, 600],[300, 250],[160,600],[120,600],[320, 100],[320, 50]]
+                            sizes: [[300, 600],[300, 250]]
                         }
                     },
                     bids: [
                         {bidder: 'sovrn',labelAny: ["desktop","mobile"],params: {tagid: '616067'}},
                         {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616068'}},
-                        {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616069'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616070'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616071'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616072'}},
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
                         {bidder: 'emx_digital',params: {tagid: '71910'}},
                         {bidder:'bidfluence',params:{placementId:'16e91853-e683-4a70-84b2-37a344449051',publisherId:'cd78fa57-3e97-445a-83eb-1548fd51f79f'}},
@@ -78,16 +63,12 @@
                     code: 'div-gpt-ad-Rightrail_3',
                     mediaTypes: {
                         banner: {
-                            sizes: [[300, 600],[300, 250],[160,600],[120,600],[320, 100],[320, 50]]
+                            sizes: [[300, 600],[300, 250]]
                         }
                     },
                     bids: [
                         {bidder: 'sovrn',labelAny: ["desktop","mobile"],params: {tagid: '616067'}},
                         {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616068'}},
-                        {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616069'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616070'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616071'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616072'}},
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
                         {bidder: 'emx_digital',params: {tagid: '71910'}},
                         {bidder:'bidfluence',params:{placementId:'16e91853-e683-4a70-84b2-37a344449051',publisherId:'cd78fa57-3e97-445a-83eb-1548fd51f79f'}},
@@ -98,14 +79,11 @@
                     code: 'div-gpt-ad-Footer',
                     mediaTypes: {
                         banner: {
-                            sizes: [[970,90],[728,90],[320, 100],[320, 50]]
+                            sizes: [[970,250],[728,90],[300, 250]]
                         }
                     },
                     bids: [
-                        {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616073'}},
                         {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616074'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616075'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616076'}},
                         {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616077'}},
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
                         {bidder: 'emx_digital',params: {tagid: '71905'}},
@@ -118,14 +96,11 @@
                     code: 'div-gpt-ad-Forum_1',
                     mediaTypes: {
                         banner: {
-                            sizes: [[970,90],[728,90],[320, 100],[320, 50]]
+                            sizes: [[728,90],[300, 250]]
                         }
                     },
                     bids: [
-                        {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616039'}},
                         {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616040'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616041'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616042'}},
                         {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616043'}},
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
                         {bidder: 'emx_digital',params: {tagid: '71906'}},
@@ -138,14 +113,11 @@
                     code: 'div-gpt-ad-Forum_2',
                     mediaTypes: {
                         banner: {
-                            sizes: [[970,90],[728,90],[320, 100],[320, 50]]
+                            sizes: [[728,90],[300, 250]]
                         }
                     },
                     bids: [
-                        {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616044'}},
                         {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616045'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616046'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616048'}},
                         {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616049'}},
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
                         {bidder: 'emx_digital',params: {tagid: '71907'}},
@@ -158,39 +130,16 @@
                     code: 'div-gpt-ad-Forum_3',
                     mediaTypes: {
                         banner: {
-                            sizes: [[970,90],[728,90],[320, 100],[320, 50]]
+                            sizes: [[728,90],[300, 250]]
                         }
                     },
                     bids: [
-                        {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616050'}},
                         {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616051'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616052'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616053'}},
                         {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616054'}},
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
                         {bidder: 'emx_digital',params: {tagid: '71908'}},
                         {bidder:'bidfluence',labelAny: ["desktop"],params:{placementId:'e7bf5d22-bc72-4bfb-aca3-3914fadbbf0a',publisherId:'cd78fa57-3e97-445a-83eb-1548fd51f79f'}},
                         {bidder:'bidfluence',labelAny: ["mobile"],params:{placementId:'d05cc102-9b52-4356-befe-165be9d6e20e',publisherId:'cd78fa57-3e97-445a-83eb-1548fd51f79f'}},
-                        {bidder: 'conversant',params: {site_id: '125324'}}
-                    ]
-                },
-                {
-                    code: 'div-gpt-ad-Forum_4',
-                    mediaTypes: {
-                        banner: {
-                            sizes: [[970,90],[728,90],[320, 100],[320, 50]]
-                        }
-                    },
-                    bids: [
-                        {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616055'}},
-                        {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616056'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616057'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616059'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616060'}},
-                        {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
-                        {bidder: 'emx_digital',params: {tagid: '71909'}},
-                        {bidder:'bidfluence',labelAny: ["desktop"],params:{placementId:'8497f1e8-07d2-4bd9-8e62-975ff4f89be0',publisherId:'cd78fa57-3e97-445a-83eb-1548fd51f79f'}},
-                        {bidder:'bidfluence',labelAny: ["mobile"],params:{placementId:'1edb1ded-bad2-4df1-8a9a-1ea7b53cc44c',publisherId:'cd78fa57-3e97-445a-83eb-1548fd51f79f'}},
                         {bidder: 'conversant',params: {site_id: '125324'}}
                     ]
                 }
@@ -220,8 +169,9 @@
                 pbjs.setConfig({
                     priceGranularity: customPriceMap,
                     sizeConfig: [
-                        {mediaQuery: '(min-width: 768px)', sizesSupported: [[970, 250],[970,90],[728,90],[300, 600],[300,250],[160,600],[120, 600]], labels: ['desktop']},
-                        {mediaQuery: '(min-width: 0px) and (max-width: 767px)',sizesSupported: [[320, 100],[320, 50],[300, 250]],labels: ['mobile']}
+                        {mediaQuery: '(min-width: 1320px)', sizesSupported: [[970, 250]], labels: ['desktopLarge']},
+                        {mediaQuery: '(min-width: 768px) and (max-width: 1319px)', sizesSupported: [[728,90],[300, 600],[300,250]], labels: ['desktop']},
+                        {mediaQuery: '(min-width: 0px) and (max-width: 767px)',sizesSupported: [[300, 250]],labels: ['mobile']}
                     ],
                     usersync:{
                         userIds:[{
@@ -251,34 +201,32 @@
 
             googletag.cmd.push(function() {
                 var mapLeaTop = googletag.sizeMapping().
-                    addSize([0, 0], [[320, 50],[320,100],[300,250]]).
-                    addSize([768, 0], [[970, 250],[970,90],[728,90]]).
+                    addSize([0, 0], [300,250]).
+                    addSize([768, 0], [728,90]).
+                    addSize([1320, 0], [970,250]).
                     build();
                 var mapRec = googletag.sizeMapping().
-                    addSize([0, 0], [[320, 50],[320,100],[300,250]]).
-                    addSize([768, 0], [[300, 250],[300,600],[160,600],[120,600]]).
+                    addSize([0, 0], []).
+                    addSize([768, 0], [[300, 250],[300,600]]).
                     build();
                 var mapLeaForum = googletag.sizeMapping().
-                    addSize([0, 0], [[320, 50],[320,100],[300,250]]).
-                    addSize([768, 0], [[728,90]]).
-                    addSize([1320, 0], [[970,90],[728,90]]).
+                    addSize([0, 0], [300,250]).
+                    addSize([768, 0], [728,90]).
                     build();
+                var mapLeaFoot = googletag.sizeMapping().
+                    addSize([0, 0], [300,250]).
+                    addSize([768, 0], [728,90]).
+                    addSize([1320, 0], [970,250]).
+                    build();    
                 googletag.defineSlot('/1055375/Header', [728, 90], 'div-gpt-ad-Header').defineSizeMapping(mapLeaTop).addService(googletag.pubads());
                 googletag.defineSlot('/1055375/Forum_1', [728, 90], 'div-gpt-ad-Forum_1').defineSizeMapping(mapLeaForum).addService(googletag.pubads());
                 googletag.defineSlot('/1055375/Forum_2', [728, 90], 'div-gpt-ad-Forum_2').defineSizeMapping(mapLeaForum).addService(googletag.pubads());
                 googletag.defineSlot('/1055375/Forum_3', [728, 90], 'div-gpt-ad-Forum_3').defineSizeMapping(mapLeaForum).addService(googletag.pubads());
-                googletag.defineSlot('/1055375/Forum_4', [728, 90], 'div-gpt-ad-Forum_4').defineSizeMapping(mapLeaForum).addService(googletag.pubads());
                 googletag.defineSlot('/1055375/Rightrail_1', [[300, 600],[300,250]], 'div-gpt-ad-Rightrail_1').defineSizeMapping(mapRec).addService(googletag.pubads());
                 googletag.defineSlot('/1055375/Rightrail_2', [[300, 600],[300,250]], 'div-gpt-ad-Rightrail_2').defineSizeMapping(mapRec).addService(googletag.pubads());
                 googletag.defineSlot('/1055375/Rightrail_3', [[300, 600],[300,250]], 'div-gpt-ad-Rightrail_3').defineSizeMapping(mapRec).addService(googletag.pubads());
-                googletag.defineSlot('/1055375/Footer', [728, 90], 'div-gpt-ad-Footer').defineSizeMapping(mapLeaForum).addService(googletag.pubads());
-googletag.defineSlot('/1055375/Forum_Sticky_NativeAd', ['fluid'], 'div-gpt-ad-sticky_native_ad').addService(googletag.pubads()).setCollapseEmptyDiv(true);
-googletag.defineSlot('/1055375/Forum_NativeAd', ['fluid'], 'div-gpt-ad-native-ad').addService(googletag.pubads()).setCollapseEmptyDiv(true);
-googletag.defineSlot('/1055375/Forum_NativeAd2', ['fluid'], 'div-gpt-ad-native-ad-2').addService(googletag.pubads()).setCollapseEmptyDiv(true);
-googletag.defineSlot('/1055375/Forum_NativeAd3', ['fluid'], 'div-gpt-ad-native-ad-3').addService(googletag.pubads()).setCollapseEmptyDiv(true);
-googletag.defineSlot('/1055375/Forum_Sticky_NativeAd2', ['fluid'], 'div-gpt-ad-sticky_native_ad-2').addService(googletag.pubads()).setCollapseEmptyDiv(true);
+                googletag.defineSlot('/1055375/Footer', [728, 90], 'div-gpt-ad-Footer').defineSizeMapping(mapLeaFoot).addService(googletag.pubads());
                 googletag.pubads().enableSingleRequest();
-                googletag.pubads().collapseEmptyDivs(true);
                 googletag.pubads().setTargeting('category', 'forum');
                 googletag.pubads().setTargeting('forum', '_{vb:raw foruminfo.title_doubleclick}');
                 googletag.pubads().setTargeting('usergroup', '{vb:raw bbuserinfo.usergroupid}');
@@ -293,8 +241,7 @@ googletag.defineSlot('/1055375/Forum_Sticky_NativeAd2', ['fluid'], 'div-gpt-ad-s
     </head>
 
     <body>
-        <h2>Forum test</h2>
-        <h5>div-gpt-ad-Header</h5>
+
         <div id='div-gpt-ad-Header'>
             <script type='text/javascript'>
                 googletag.cmd.push(function() {
@@ -302,7 +249,7 @@ googletag.defineSlot('/1055375/Forum_Sticky_NativeAd2', ['fluid'], 'div-gpt-ad-s
                 });
             </script>
         </div>        
-        <h5>Div-2</h5>
+
         <div id='div-gpt-ad-Forum_1'>
             <script type='text/javascript'>
                 googletag.cmd.push(function() {
@@ -310,7 +257,7 @@ googletag.defineSlot('/1055375/Forum_Sticky_NativeAd2', ['fluid'], 'div-gpt-ad-s
                 });
             </script>
         </div>
-        <h5>Div-2</h5>
+
         <div id='div-gpt-ad-Forum_2'>
             <script type='text/javascript'>
                 googletag.cmd.push(function() {
@@ -318,7 +265,7 @@ googletag.defineSlot('/1055375/Forum_Sticky_NativeAd2', ['fluid'], 'div-gpt-ad-s
                 });
             </script>
         </div>
-                <h5>Div-2</h5>
+
         <div id='div-gpt-ad-Forum_3'>
             <script type='text/javascript'>
                 googletag.cmd.push(function() {
@@ -326,15 +273,7 @@ googletag.defineSlot('/1055375/Forum_Sticky_NativeAd2', ['fluid'], 'div-gpt-ad-s
                 });
             </script>
         </div>
-                <h5>Div-2</h5>
-        <div id='div-gpt-ad-Forum_4'>
-            <script type='text/javascript'>
-                googletag.cmd.push(function() {
-                    googletag.display('div-gpt-ad-Forum_4');
-                });
-            </script>
-        </div>
-                <h5>Div-2</h5>
+
         <div id='div-gpt-ad-Rightrail_1'>
             <script type='text/javascript'>
                 googletag.cmd.push(function() {
@@ -342,7 +281,7 @@ googletag.defineSlot('/1055375/Forum_Sticky_NativeAd2', ['fluid'], 'div-gpt-ad-s
                 });
             </script>
         </div>
-                <h5>Div-2</h5>
+
         <div id='div-gpt-ad-Rightrail_2'>
             <script type='text/javascript'>
                 googletag.cmd.push(function() {
@@ -350,7 +289,7 @@ googletag.defineSlot('/1055375/Forum_Sticky_NativeAd2', ['fluid'], 'div-gpt-ad-s
                 });
             </script>
         </div>
-        <h5>advert</h5>
+
         <div id='div-gpt-ad-Rightrail_3'>
             <script type='text/javascript'>
                 googletag.cmd.push(function() {
@@ -358,7 +297,7 @@ googletag.defineSlot('/1055375/Forum_Sticky_NativeAd2', ['fluid'], 'div-gpt-ad-s
                 });
             </script>
         </div>
-                <h5>Div-2</h5>
+
         <div id='div-gpt-ad-Footer'>
             <script type='text/javascript'>
                 googletag.cmd.push(function() {
