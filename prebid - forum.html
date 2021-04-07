@@ -169,8 +169,9 @@
                 pbjs.setConfig({
                     priceGranularity: customPriceMap,
                     sizeConfig: [
-                        {mediaQuery: '(min-width: 768px)', sizesSupported: [[970, 250],[970,90],[728,90],[300, 600],[300,250],[160,600],[120, 600]], labels: ['desktop']},
-                        {mediaQuery: '(min-width: 0px) and (max-width: 767px)',sizesSupported: [[320, 100],[320, 50],[300, 250]],labels: ['mobile']}
+                        {mediaQuery: '(min-width: 1320px)', sizesSupported: [[970, 250]], labels: ['desktopLarge']},
+                        {mediaQuery: '(min-width: 768px) and (max-width: 1319px)', sizesSupported: [[728,90],[300, 600],[300,250]], labels: ['desktop']},
+                        {mediaQuery: '(min-width: 0px) and (max-width: 767px)',sizesSupported: [[300, 250]],labels: ['mobile']}
                     ],
                     usersync:{
                         userIds:[{
