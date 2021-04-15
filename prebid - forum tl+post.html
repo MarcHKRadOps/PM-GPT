@@ -2,8 +2,7 @@
     <head>
         <script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
         <script async src="<<link to uploaded prebid.js file here>>"></script>
-        <script type='text/javascript' src='https://www.practicalmachinist.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
-        <!-- //Connect Container: practicalmachinist.com --> <script src="//get.s-onetag.com/b12d81fb-9947-42c0-b3ac-15d295af4c29/tag.min.js" async defer></script>
+
         <script>         
             var PREBID_TIMEOUT = 1000;
             var FAILSAFE_TIMEOUT = 3000;
@@ -17,6 +16,8 @@
                         }
                     },
                     bids: [
+                        {bidder: 'appnexus',size:[''],params:{placementId:21380542}},
+                        {bidder: 'oftmedia',params:{placementId:19305070}},
                         {bidder: 'sovrn',labelAny: ["desktopLarge"],params: {tagid: '616035'}},
                         {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616035'}},
                         {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616038'}},
@@ -33,6 +34,8 @@
                         }
                     },
                     bids: [
+                        {bidder: 'appnexus',size:[''],params:{placementId:21380543}},
+                        {bidder: 'oftmedia',params:{placementId:19305087}},
                         {bidder: 'sovrn',labelAny: ["desktop","mobile"],params: {tagid: '616061'}},
                         {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616062'}},
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
@@ -48,6 +51,8 @@
                         }
                     },
                     bids: [
+                        {bidder: 'appnexus',size:[''],params:{placementId:21380548}},
+                        {bidder: 'oftmedia',params:{placementId:19305088}},
                         {bidder: 'sovrn',labelAny: ["desktop","mobile"],params: {tagid: '616067'}},
                         {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616068'}},
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
@@ -63,6 +68,8 @@
                         }
                     },
                     bids: [
+                        {bidder: 'appnexus',size:[''],params:{placementId:21380550}},
+                        {bidder: 'oftmedia',params:{placementId:19305193}},
                         {bidder: 'sovrn',labelAny: ["desktop","mobile"],params: {tagid: '616067'}},
                         {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616068'}},
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
@@ -78,6 +85,8 @@
                         }
                     },
                     bids: [
+                        {bidder: 'appnexus',size:[''],params:{placementId:21380529}},
+                        {bidder: 'oftmedia',params:{placementId:19305075}},
                         {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616074'}},
                         {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616077'}},
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
@@ -93,6 +102,8 @@
                         }
                     },
                     bids: [
+                        {bidder: 'appnexus',size:[''],params:{placementId:21380533}},
+                        {bidder: 'oftmedia',params:{placementId:19305080}},
                         {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616040'}},
                         {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616043'}},
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
@@ -108,6 +119,8 @@
                         }
                     },
                     bids: [
+                        {bidder: 'appnexus',size:[''],params:{placementId:21380537}},
+                        {bidder: 'oftmedia',params:{placementId:19305081}},
                         {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616045'}},
                         {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616049'}},
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
@@ -123,6 +136,8 @@
                         }
                     },
                     bids: [
+                        {bidder: 'appnexus',size:[''],params:{placementId:21380540}},
+                        {bidder: 'oftmedia',params:{placementId:19305084}},
                         {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616051'}},
                         {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616054'}},
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
@@ -181,6 +196,14 @@
                     googletag.pubads().refresh();
                 });
             }
+            
+            pbjs.bidderSettings = {
+                oftmedia: {
+                    bidCpmAdjustment: function( bidCpm ) {
+                        return bidCpm *0.7;
+                    }
+                }
+            };
             
             setTimeout(function() {
                 initAdserver();
