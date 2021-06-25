@@ -4,23 +4,24 @@
         <script async src="<<link to uploaded prebid.js file here>>"></script>
 
         <script>           
-            var PREBID_TIMEOUT = 1000;
-            var FAILSAFE_TIMEOUT = 3000;
-
             var adUnits = [
                 {
                     code: 'div-gpt-ad-Header',
                     mediaTypes: {
                         banner: {
-                            sizes: [[970, 250],[728,90],[300,250]]
+                            sizeConfig: [
+                                { minViewPort: [0, 0], sizes: [[300, 250]] }, 
+                                { minViewPort: [768, 0], sizes: [[728, 90]] },
+                                { minViewPort: [1320, 0], sizes: [[970, 250]] } 
+                            ]
                         }
                     },
                     bids: [
                         {bidder: 'appnexus',size:[''],params:{placementId:21380542}},
                         {bidder: 'oftmedia',params:{placementId:19305070}},
                         {bidder: 'sovrn',labelAny: ["desktopLarge"],params: {tagid: '616035'}},
-                        {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616035'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616038'}},
+                        {bidder: 'sovrn',params: {tagid: '616035'}},
+                        {bidder: 'sovrn',params: {tagid: '616038'}},
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
                         {bidder: 'emx_digital',params: {tagid: '71903'}},
                         {bidder: 'conversant',params: {site_id: '125324'}}
@@ -30,14 +31,17 @@
                     code: 'div-gpt-ad-Rightrail_1',
                     mediaTypes: {
                         banner: {
-                            sizes: [[300, 600],[300, 250]]
+                            sizeConfig: [
+                                { minViewPort: [0, 0], sizes: [[300, 250]] }, 
+                                { minViewPort: [768, 0], sizes: [[300, 250], [300, 600]] } 
+                            ]
                         }
                     },
                     bids: [
                         {bidder: 'appnexus',size:[''],params:{placementId:21380543}},
                         {bidder: 'oftmedia',params:{placementId:19305087}},
-                        {bidder: 'sovrn',labelAny: ["desktop","mobile"],params: {tagid: '616061'}},
-                        {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616062'}},
+                        {bidder: 'sovrn',params: {tagid: '616061'}},
+                        {bidder: 'sovrn',params: {tagid: '616062'}},
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
                         {bidder: 'emx_digital',params: {tagid: '71904'}},
                         {bidder: 'conversant',params: {site_id: '125324'}}
@@ -47,14 +51,17 @@
                     code: 'div-gpt-ad-Rightrail_2',
                     mediaTypes: {
                         banner: {
-                            sizes: [[300, 600],[300, 250]]
+                            sizeConfig: [
+                                { minViewPort: [0, 0], sizes: [[300, 250]] }, 
+                                { minViewPort: [768, 0], sizes: [[300, 250], [300, 600]] } 
+                            ]
                         }
                     },
                     bids: [
                         {bidder: 'appnexus',size:[''],params:{placementId:21380548}},
                         {bidder: 'oftmedia',params:{placementId:19305088}},
-                        {bidder: 'sovrn',labelAny: ["desktop","mobile"],params: {tagid: '616067'}},
-                        {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616068'}},
+                        {bidder: 'sovrn',params: {tagid: '616067'}},
+                        {bidder: 'sovrn',params: {tagid: '616068'}},
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
                         {bidder: 'emx_digital',params: {tagid: '71910'}},
                         {bidder: 'conversant',params: {site_id: '125324'}}
@@ -64,14 +71,17 @@
                     code: 'div-gpt-ad-Rightrail_3',
                     mediaTypes: {
                         banner: {
-                            sizes: [[300, 600],[300, 250]]
+                            sizeConfig: [
+                                { minViewPort: [0, 0], sizes: [[300, 250]] }, 
+                                { minViewPort: [768, 0], sizes: [[300, 250], [300, 600]] } 
+                            ]
                         }
                     },
                     bids: [
                         {bidder: 'appnexus',size:[''],params:{placementId:21380550}},
                         {bidder: 'oftmedia',params:{placementId:19305193}},
-                        {bidder: 'sovrn',labelAny: ["desktop","mobile"],params: {tagid: '616067'}},
-                        {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616068'}},
+                        {bidder: 'sovrn',params: {tagid: '616067'}},
+                        {bidder: 'sovrn',params: {tagid: '616068'}},
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
                         {bidder: 'emx_digital',params: {tagid: '71910'}},
                         {bidder: 'conversant',params: {site_id: '125324'}}
@@ -81,16 +91,35 @@
                     code: 'div-gpt-ad-Footer',
                     mediaTypes: {
                         banner: {
-                            sizes: [[970,250],[728,90],[300, 250]]
+                            sizeConfig: [
+                                { minViewPort: [0, 0], sizes: [[300, 250]] }, 
+                                { minViewPort: [768, 0], sizes: [[728, 90]] },
+                                { minViewPort: [1320, 0], sizes: [[970, 250]] } 
+                            ]
                         }
                     },
                     bids: [
                         {bidder: 'appnexus',size:[''],params:{placementId:21380529}},
                         {bidder: 'oftmedia',params:{placementId:19305075}},
-                        {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616074'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616077'}},
+                        {bidder: 'sovrn',params: {tagid: '616074'}},
+                        {bidder: 'sovrn',params: {tagid: '616077'}},
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
                         {bidder: 'emx_digital',params: {tagid: '71905'}},
+                        {bidder: 'conversant',params: {site_id: '125324'}}
+                    ]
+                },
+                {
+                    code: 'div-gpt-ad-Forum_0',
+                    mediaTypes: {
+                        banner: {
+                            sizeConfig: [
+                                { minViewPort: [0, 0], sizes: [[300, 250]] }, 
+                                { minViewPort: [768, 0], sizes: [[728, 90]] },
+                            ]
+                        }
+                    },
+                    bids: [
+                        {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
                         {bidder: 'conversant',params: {site_id: '125324'}}
                     ]
                 },
@@ -98,14 +127,17 @@
                     code: 'div-gpt-ad-Forum_1',
                     mediaTypes: {
                         banner: {
-                            sizes: [[728,90],[300, 250]]
+                            sizeConfig: [
+                                { minViewPort: [0, 0], sizes: [[300, 250]] }, 
+                                { minViewPort: [768, 0], sizes: [[728, 90]] },
+                            ]
                         }
                     },
                     bids: [
                         {bidder: 'appnexus',size:[''],params:{placementId:21380533}},
                         {bidder: 'oftmedia',params:{placementId:19305080}},
-                        {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616040'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616043'}},
+                        {bidder: 'sovrn',params: {tagid: '616040'}},
+                        {bidder: 'sovrn',params: {tagid: '616043'}},
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
                         {bidder: 'emx_digital',params: {tagid: '71906'}},
                         {bidder: 'conversant',params: {site_id: '125324'}}
@@ -115,14 +147,17 @@
                     code: 'div-gpt-ad-Forum_2',
                     mediaTypes: {
                         banner: {
-                            sizes: [[728,90],[300, 250]]
+                            sizeConfig: [
+                                { minViewPort: [0, 0], sizes: [[300, 250]] }, 
+                                { minViewPort: [768, 0], sizes: [[728, 90]] },
+                            ]
                         }
                     },
                     bids: [
                         {bidder: 'appnexus',size:[''],params:{placementId:21380537}},
                         {bidder: 'oftmedia',params:{placementId:19305081}},
-                        {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616045'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616049'}},
+                        {bidder: 'sovrn',params: {tagid: '616045'}},
+                        {bidder: 'sovrn',params: {tagid: '616049'}},
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
                         {bidder: 'emx_digital',params: {tagid: '71907'}},
                         {bidder: 'conversant',params: {site_id: '125324'}}
@@ -132,14 +167,17 @@
                     code: 'div-gpt-ad-Forum_3',
                     mediaTypes: {
                         banner: {
-                            sizes: [[728,90],[300, 250]]
+                            sizeConfig: [
+                                { minViewPort: [0, 0], sizes: [[300, 250]] }, 
+                                { minViewPort: [768, 0], sizes: [[728, 90]] },
+                            ]
                         }
                     },
                     bids: [
                         {bidder: 'appnexus',size:[''],params:{placementId:21380540}},
                         {bidder: 'oftmedia',params:{placementId:19305084}},
-                        {bidder: 'sovrn',labelAny: ["desktop"],params: {tagid: '616051'}},
-                        {bidder: 'sovrn',labelAny: ["mobile"],params: {tagid: '616054'}},
+                        {bidder: 'sovrn',params: {tagid: '616051'}},
+                        {bidder: 'sovrn',params: {tagid: '616054'}},
                         {bidder: 'sonobi',params: {placement_id: '3ea1692fde6c14da7a91'}},
                         {bidder: 'emx_digital',params: {tagid: '71908'}},
                         {bidder: 'conversant',params: {site_id: '125324'}}
@@ -170,11 +208,6 @@
                 pbjs.addAdUnits(adUnits);
                 pbjs.setConfig({
                     priceGranularity: customPriceMap,
-                    sizeConfig: [
-                        {mediaQuery: '(min-width: 1320px)', sizesSupported: [[970, 250]], labels: ['desktopLarge']},
-                        {mediaQuery: '(min-width: 768px) and (max-width: 1319px)', sizesSupported: [[728,90],[300, 600],[300,250]], labels: ['desktop']},
-                        {mediaQuery: '(min-width: 0px) and (max-width: 767px)',sizesSupported: [[300, 250]],labels: ['mobile']}
-                    ],
                     usersync:{
                         userIds:[{
                             name:'pubCommonId',storage:{type:'cookie',name:'_pubCommonId'}
@@ -184,7 +217,7 @@
                 pbjs.enableAnalytics({provider: 'roxot',options: {publisherId: '492e72c0-440b-4801-87ed-0a77bdd5ab09'}});
                 pbjs.requestBids({
                     bidsBackHandler: initAdserver,
-                    timeout: PREBID_TIMEOUT
+                    timeout: 1000
                 });
             });
 
@@ -207,7 +240,7 @@
             
             setTimeout(function() {
                 initAdserver();
-            }, FAILSAFE_TIMEOUT);
+            }, 3000);
 
             googletag.cmd.push(function() {
                 var mapLeaTop = googletag.sizeMapping().
@@ -216,7 +249,7 @@
                     addSize([1320, 0], [970,250]).
                     build();
                 var mapRec = googletag.sizeMapping().
-                    addSize([0, 0], []).
+                    addSize([0, 0], [[300, 250]]).
                     addSize([768, 0], [[300, 250],[300,600]]).
                     build();
                 var mapLeaForum = googletag.sizeMapping().
@@ -229,6 +262,7 @@
                     addSize([1320, 0], [970,250]).
                     build();    
                 googletag.defineSlot('/1055375/Header', [728, 90], 'div-gpt-ad-Header').defineSizeMapping(mapLeaTop).addService(googletag.pubads());
+                googletag.defineSlot('/1055375/Forum_0', [728, 90], 'div-gpt-ad-Forum_0').defineSizeMapping(mapLeaForum).addService(googletag.pubads());
                 googletag.defineSlot('/1055375/Forum_1', [728, 90], 'div-gpt-ad-Forum_1').defineSizeMapping(mapLeaForum).addService(googletag.pubads());
                 googletag.defineSlot('/1055375/Forum_2', [728, 90], 'div-gpt-ad-Forum_2').defineSizeMapping(mapLeaForum).addService(googletag.pubads());
                 googletag.defineSlot('/1055375/Forum_3', [728, 90], 'div-gpt-ad-Forum_3').defineSizeMapping(mapLeaForum).addService(googletag.pubads());
@@ -259,7 +293,15 @@
                     googletag.display('div-gpt-ad-Header');
                 });
             </script>
-        </div>        
+        </div>     
+
+        <div id='div-gpt-ad-Forum_0'>
+            <script type='text/javascript'>
+                googletag.cmd.push(function() {
+                    googletag.display('div-gpt-ad-Forum_0');
+                });
+            </script>
+        </div>   
 
         <div id='div-gpt-ad-Forum_1'>
             <script type='text/javascript'>
